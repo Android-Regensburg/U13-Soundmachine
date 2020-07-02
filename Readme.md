@@ -17,6 +17,8 @@ header-includes: |
 
 # U13-Soundmachine
 
+![Cover für die dreizehnte Übungsaufgabe](./docs/cover.png)
+
 ## Aufgabe
 
 Das Ziel dieser Aufgabe ist die Implementierung einer simplen Soundmachine-App. Die Anwendung soll durch Betätigen von Buttons kurze Soundeffekte abspielen können, die in der Projektstruktur gespeichert sind.
