@@ -14,36 +14,9 @@ import de.ur.mi.android.u13soundmachine.helper.MediaPlayerHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    GridLayout gridLayout;
-    MediaPlayerHelper mediaPlayerHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mediaPlayerHelper = new MediaPlayerHelper(this);
-        initUI();
-    }
-
-    private void initUI() {
-        gridLayout = findViewById(R.id.grid_sounds);
-        for (int i = 0; i < gridLayout.getChildCount(); i++) {
-            final int resId = AppConfig.SOUND_IDS[i];
-            Button soundButton = (Button) gridLayout.getChildAt(i);
-            soundButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playAudio(resId);
-                }
-            });
-        }
-    }
-
-    private void playAudio(int resId) {
-        try {
-            mediaPlayerHelper.playAudio(resId);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
